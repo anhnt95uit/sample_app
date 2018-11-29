@@ -1,0 +1,12 @@
+<% provide(:title, "About") %>
+<h1><%= t ".title" %></h1>
+<p>
+  The <a href="http://www.railstutorial.org/"><em><%= t "dictionary.tutorial" %></em></a> <%= t ".continues" %>
+  <a href="http://www.railstutorial.org/book"><%= t ".book" %></a> and
+  <a href="http://screencasts.railstutorial.org/"><%= t ".screen_cast" %></a>
+  <%= t ".teach_about" %>
+  <a href="http://rubyonrails.org/"><%= t "dictionary.tutorial" %></a>.
+  <%= t ".introduce" %>
+</p>
+<%= link_to (t "dictionary.language_En"), locale:"en" %>
+<%= link_to (t "dictionary.language_Vi"), locale:"vi" %>

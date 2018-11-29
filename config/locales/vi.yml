@@ -1,0 +1,10 @@
+vi:
+  dictionary:
+    main_title: "Mẫu ứng dụng về Ruby on Rails"
+    language_En: "Tiếng Anh"
+    language_Vi: "Tiếng Việt"
+  static_pages:
+    home:
+      introduce: "Đây là trang chủ cho"
+      title: "Trang chủ"
+      end: "Ứng dụng Mẫu"

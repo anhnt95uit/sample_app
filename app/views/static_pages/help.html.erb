@@ -1,0 +1,10 @@
+<% provide(:title, "Help") %>
+<h1><%= t ".title" %></h1>
+<p>
+  <%= t ".instruction1" %>
+  <a href="http://www.railstutorial.org/help"><%= t ".content_help" %></a>.
+  <%= t ".instruction2" %>
+  <a href="http://www.railstutorial.org/book"><em><%= t "dictionary.tutorial" %></em><%= t ".book" %></a>.
+</p>
+<%= link_to (t "dictionary.language_En"), locale:"en" %>
+<%= link_to (t "dictionary.language_Vi"), locale:"vi" %>
