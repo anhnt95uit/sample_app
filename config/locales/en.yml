@@ -3,25 +3,7 @@ en:
     main_title: "Ruby on Rails Tutorial Sample App"
     language_En: "English"
     language_Vi: "VietNamese"
-    tutorial: "Ruby on Rails Tutorial"
   static_pages:
-    about:
-      book: "book"
-      introduce: "This is the sample application for the tutorial."
-      continues: "is a"
-      screen_cast: "screencast series"
-      teach_about: "to teach web development with"
-      title: "About"
-    contact:
-      instruction: "Contact the Ruby on Rails Tutorial about the sample app at the"
-      page: "contact page"
-      title: "Contact"
-    help:
-      book: "book"
-      instruction1: "Get help on the Ruby on Rails Tutorial at the"
-      instruction2: "To get help on this sample app, see the"
-      content_help: "Rails Tutorial help section"
-      title: "Help"
     home:
       introduce: "This is the home page for"
       title: "Home"
