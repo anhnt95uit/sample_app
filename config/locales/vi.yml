@@ -1,0 +1,28 @@
+vi:
+  dictionary:
+    main_title: "Mẫu ứng dụng về Ruby on Rails"
+    language_En: "Tiếng Anh"
+    language_Vi: "Tiếng Việt"
+    tutorial: "Hướng dẫn về ruby on rails"
+  static_pages:
+    about:
+      book: "Sách"
+      introduce: "Ứng dụng hướng dẫn mẫu."
+      continues: "là một"
+      screen_cast: "chuỗi thu hình"
+      teach_about: "để dạy lập trình web với"
+      title: "Thông tin thêm"
+    contact:
+      instruction: "Liên hệ với hướng dẫn của Ruby on Rails về ứng dụng mẫu tại"
+      page: "Trang liên hệ"
+      title: "Liên hệ"
+    help:
+      book: "Sách"
+      instruction1: "Tìm kiếm giúp đỡ với Ruby on Rails tại"
+      instruction2: "Để tìm kiếm sự giúp đỡ với ứng dụng mẫu thì có tại"
+      content_help: "trang giúp đỡ về Rails"
+      title: "Giúp đỡ"
+    home:
+      introduce: "Đây là trang chủ cho"
+      title: "Trang chủ"
+      end: "Ứng dụng Mẫu"
