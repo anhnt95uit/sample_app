@@ -1,0 +1,10 @@
+locales:
+  available: ["en", "vi"]
+  default: "en"
+users:
+  name:
+    max_length: 50
+  email:
+    max_length: 255
+  password:
+    min_length: 6
