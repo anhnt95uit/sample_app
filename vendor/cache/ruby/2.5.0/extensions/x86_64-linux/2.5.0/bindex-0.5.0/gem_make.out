@@ -1,0 +1,15 @@
+current directory: /home/anh/sample_app/vendor/cache/ruby/2.5.0/gems/bindex-0.5.0/ext/bindex
+/usr/bin/ruby2.5 -r ./siteconf20181206-16253-1vt6ml.rb extconf.rb
+creating Makefile
+
+current directory: /home/anh/sample_app/vendor/cache/ruby/2.5.0/gems/bindex-0.5.0/ext/bindex
+make "DESTDIR=" clean
+
+current directory: /home/anh/sample_app/vendor/cache/ruby/2.5.0/gems/bindex-0.5.0/ext/bindex
+make "DESTDIR="
+compiling cruby.c
+linking shared-object bindex/cruby.so
+
+current directory: /home/anh/sample_app/vendor/cache/ruby/2.5.0/gems/bindex-0.5.0/ext/bindex
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 cruby.so ./.gem.20181206-16253-14hjui6/bindex

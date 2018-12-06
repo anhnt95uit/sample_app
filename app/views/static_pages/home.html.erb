@@ -1,9 +1,12 @@
-<% provide(:title, "Home") %>
-<h1><%= t ".title" %></h1>
-<p>
-   <%= t ".introduce" %>
-  <a href="http://www.railstutorial.org/"> <%= t ".tutorial" %></a>
-   <%= t ".end" %>
-</p>
-<%= link_to (t "dictionary.language_En"), locale:"en" %>
-<%= link_to (t "dictionary.language_Vi"), locale:"vi" %>
+<% provide(:title, (t ".title")) %>
+<div class="center jumbotron">
+  <h1><%= t ".hello" %></h1>
+  <h2>
+    <%= t ".introduce" %>
+    <a href="http://www.railstutorial.org/"><%= t "dictionary.tutorial" %></a>
+    <%= t "home.end" %>
+  </h2>
+  <%= link_to (t "dictionary.sign_up"), signup_path, class: "btn btn-lg btn-primary" %>
+</div>
+<%= link_to image_tag("rails.png", alt: "Rails logo"),
+  "http://rubyonrails.org/" %>

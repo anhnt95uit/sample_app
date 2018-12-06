@@ -3,8 +3,25 @@ en:
     main_title: "Ruby on Rails Tutorial Sample App"
     language_En: "English"
     language_Vi: "VietNamese"
+    tutorial: "Ruby on Rails Tutorial"
+    the: "The"
+    by: "by"
+    new: "News"
+    author: "Michael Hartl"
+    sign_up: "Sign up now!"
   static_pages:
     home:
+      hello: "Welcome to the Sample App"
       introduce: "This is the home page for"
       title: "Home"
       end: "sample application"
+  users:
+    new:
+      title: "Sign Up"
+      introduce: "This will be a signup page for new users."
+      login: "Log in"
+  layouts:
+    about: "About"
+    help: "Help"
+    contact: "Contact"
+    home: "Home"

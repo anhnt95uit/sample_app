@@ -3,8 +3,25 @@ vi:
     main_title: "Mẫu ứng dụng về Ruby on Rails"
     language_En: "Tiếng Anh"
     language_Vi: "Tiếng Việt"
+    tutorial: "Hướng dẫn về ruby on rails"
+    the: "Những"
+    by: "bởi"
+    author: "Michael Hartl"
+    new: "mới"
+    sign_up: "Đăng kí ngay"
   static_pages:
     home:
+      hello: "Chào mừng bạn đến với Ứng dụng mẫu"
       introduce: "Đây là trang chủ cho"
       title: "Trang chủ"
       end: "Ứng dụng Mẫu"
+  users:
+    new:
+      title: "Đăng ký"
+      introduce: "Đây sẽ là trang đăng ký cho người dùng mới."
+      login: "Đăng nhập"
+  layouts:
+    about: "Thông tin thêm"
+    help: "Giúp đỡ"
+    contact: "Liên hệ"
+    home: "Trang chủ"
