@@ -1,6 +1,7 @@
 en:
   dictionary:
     welcome: "Welcome to the Sample App!"
+    danger: "Invalid email/password combination"
     main_title: "Ruby on Rails Tutorial Sample App"
     language_En: "English"
     language_Vi: "VietNamese"
@@ -15,6 +16,18 @@ en:
     help: "Help"
     contact: "Contact"
     home: "Home"
+    header:
+      title: "Users"
+      account: "Account"
+      profile: "Profile"
+      settings: "Settings"
+      log_out: "Log out"
+      log_in: "Log in"
+  session:
+    new:
+      title: "Log in"
+      sign_up: "Sign up now!"
+      new_user: "New user?"
   shared:
     error_messages:
       contains: "The form contains "
