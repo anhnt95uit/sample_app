@@ -27,7 +27,8 @@ class User < ApplicationRecord
 
   def remember
     self.remember_token = User.new_token
-    update_attribute :remember_digest, User.digest(remember_token))
+    update_attribute :remember_digest, User.digest(remember_token)
+  end
   # Returns true if the given token matches the digest.
 
   def authenticated? remember_token
