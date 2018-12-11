@@ -1,5 +1,7 @@
 vi:
   dictionary:
+    welcome: "Chào mừng bạn đến với Ứng dụng mẫu!"
+    danger: "email / mật khẩu không hợp lệ."
     main_title: "Mẫu ứng dụng về Ruby on Rails"
     language_En: "Tiếng Anh"
     language_Vi: "Tiếng Việt"
@@ -14,6 +16,18 @@ vi:
     help: "Giúp đỡ"
     contact: "Liên hệ"
     home: "Trang chủ"
+    header:
+      title: "Người dùng"
+      account: "Tài khoản"
+      profile: "Hồ sơ"
+      settings: "Cài đặt"
+      log_out: "Đăng xuất"
+      log_in: "Đăng nhập"
+  session:
+    new:
+      title: "Đăng nhập"
+      sign_up: "Dăng kí ngay"
+      new_user: "Người dùng mới?"
   shared:
     error_messages:
       contains: "Biểu mẫu có chứa"
@@ -48,3 +62,4 @@ vi:
       login: "Đăng nhập"
       confirm: "Xác nhận"
       create: "Tạo tài khoản của tôi"
+
