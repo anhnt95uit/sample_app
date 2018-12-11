@@ -9,7 +9,33 @@ vi:
     author: "Michael Hartl"
     new: "mới"
     sign_up: "Đăng kí ngay"
+  layouts:
+    about: "Thông tin thêm"
+    help: "Giúp đỡ"
+    contact: "Liên hệ"
+    home: "Trang chủ"
+  shared:
+    error_messages:
+      contains: "Biểu mẫu có chứa"
+      errors: "lỗi"
   static_pages:
+    about:
+      book: "sách"
+      introduce: "Đây là ứng dụng mẫu cho hướng dẫn."
+      continues: "là một"
+      screen_cast: "loạt screencast"
+      teach_about: "để dạy phát triển web với"
+      title: "Tìm hiểu thêm"
+    contact:
+      instruction: "Liên hệ với Hướng dẫn về Ruby on Rails về ứng dụng mẫu tại"
+      page: "Trang liên lạc"
+      title: "Liên lạc"
+    help:
+      book: "sách"
+      instruction1: "Nhận trợ giúp về Hướng dẫn Ruby on Rails tại"
+      instruction2: "Để nhận trợ giúp về ứng dụng mẫu này, hãy xem"
+      content_help: "Phần trợ giúp của Rails Tutorial"
+      title: "Trợ giúp"
     home:
       hello: "Chào mừng bạn đến với Ứng dụng mẫu"
       introduce: "Đây là trang chủ cho"
@@ -20,8 +46,5 @@ vi:
       title: "Đăng ký"
       introduce: "Đây sẽ là trang đăng ký cho người dùng mới."
       login: "Đăng nhập"
-  layouts:
-    about: "Thông tin thêm"
-    help: "Giúp đỡ"
-    contact: "Liên hệ"
-    home: "Trang chủ"
+      confirm: "Xác nhận"
+      create: "Tạo tài khoản của tôi"
