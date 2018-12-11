@@ -28,6 +28,7 @@ en:
       title: "Log in"
       sign_up: "Sign up now!"
       new_user: "New user?"
+      remember: "Remember me on this computer"
   shared:
     error_messages:
       contains: "The form contains "

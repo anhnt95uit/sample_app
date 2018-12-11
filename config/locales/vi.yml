@@ -28,6 +28,7 @@ vi:
       title: "Đăng nhập"
       sign_up: "Dăng kí ngay"
       new_user: "Người dùng mới?"
+      remember: "Ghi nhớ tôi trên máy tính này"
   shared:
     error_messages:
       contains: "Biểu mẫu có chứa"

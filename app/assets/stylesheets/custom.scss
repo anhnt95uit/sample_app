@@ -155,6 +155,15 @@ input {
   height: auto !important;
 }
 
+.checkbox {
+   margin-top: -10px;
+   margin-bottom: 10px;
+   span {
+    margin-left: 20px;
+    font-weight: normal;
+    }
+  }
+
 #error_explanation {
   color: red;
   ul {
@@ -168,4 +177,9 @@ input {
   .form-control {
     color: $state-danger-text;
   }
+}
+
+#session_remember_me {
+  width: auto;
+  margin-left: 0;
 }

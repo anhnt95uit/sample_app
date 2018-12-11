@@ -12,3 +12,5 @@ users:
     gravatar_size: 80
 gravatar:
   default_size: 50
+session:
+  one: "1"
