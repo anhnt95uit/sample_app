@@ -1,10 +1,7 @@
 en:
   dictionary:
     welcome: "Welcome to the Sample App!"
-    danger: "Invalid email/password combination"
-    update: "Profile updated"
-    log_in: "Please log in."
-    destroy: "User deleted"
+    invalid: "Invalid email/password combination"
     main_title: "Ruby on Rails Tutorial Sample App"
     language_En: "English"
     language_Vi: "VietNamese"
@@ -14,7 +11,17 @@ en:
     new: "News"
     author: "Michael Hartl"
     sign_up: "Sign up now!"
-    not_found: "not found user!"
+    session_ctl:
+      message1: "Account not activated."
+      message2: "Check your email for the activation link."
+    flash:
+      check: "Please check your email to activate your account."
+      update: "Profile updated"
+      log_in: "Please log in."
+      destroy: "User deleted"
+      not_found: "not found user!"
+      activated: "Account activated!"
+      invalid: "Invalid activation link"
   layouts:
     about: "About"
     help: "Help"
