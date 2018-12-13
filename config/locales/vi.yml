@@ -2,15 +2,19 @@ vi:
   dictionary:
     welcome: "Chào mừng bạn đến với Ứng dụng mẫu!"
     danger: "email / mật khẩu không hợp lệ."
+    update: "Hồ sơ cá nhân đã cập nhật"
+    log_in: "Xin vui lòng đăng nhập."
+    destroy: "Người dùng đã xóa"
     main_title: "Mẫu ứng dụng về Ruby on Rails"
     language_En: "Tiếng Anh"
     language_Vi: "Tiếng Việt"
     tutorial: "Hướng dẫn về ruby on rails"
     the: "Những"
     by: "bởi"
-    author: "Michael Hartl"
     new: "mới"
+    author: "Michael Hartl"
     sign_up: "Đăng kí ngay"
+    not_found: "Không tìm thấy người dùng !"
   layouts:
     about: "Thông tin thêm"
     help: "Giúp đỡ"
@@ -63,4 +67,15 @@ vi:
       login: "Đăng nhập"
       confirm: "Xác nhận"
       create: "Tạo tài khoản của tôi"
+    edit:
+      title: "Sửa người dùng"
+      introduce: "Cập nhật hồ sơ của bạn"
+      confirm: "Xác nhận"
+      save: "Lưu thay đổi"
+      change: "thay đổi"
+    index:
+      title: "Tất cả người dùng"
+    delete:
+      title: "Xóa"
+      confirm: "Bạn có chắc muốn xóa"
 

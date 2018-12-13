@@ -2,6 +2,9 @@ en:
   dictionary:
     welcome: "Welcome to the Sample App!"
     danger: "Invalid email/password combination"
+    update: "Profile updated"
+    log_in: "Please log in."
+    destroy: "User deleted"
     main_title: "Ruby on Rails Tutorial Sample App"
     language_En: "English"
     language_Vi: "VietNamese"
@@ -11,6 +14,7 @@ en:
     new: "News"
     author: "Michael Hartl"
     sign_up: "Sign up now!"
+    not_found: "not found user!"
   layouts:
     about: "About"
     help: "Help"
@@ -63,4 +67,14 @@ en:
       login: "Log in"
       confirm: "Confirmation"
       create: "Create my account"
-
+    edit:
+      title: "Edit user"
+      introduce: "Update your profile"
+      confirm: "Confirmation"
+      save: "Save changes"
+      change: "change"
+    index:
+      title: "All Users"
+    delete:
+      title: "delete"
+      confirm: "You sure?"
