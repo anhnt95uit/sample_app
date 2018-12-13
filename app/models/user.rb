@@ -58,8 +58,8 @@ class User < ApplicationRecord
 
   # Activates an account.
   def activate
-    update_attribute :activated, true
-    update_attribute :activated_at, Time.zone.now
+    update_columns :activated, true
+    update_columns :activated_at, Time.zone.now
   end
 
   # Sends activation email.
@@ -81,7 +81,7 @@ class User < ApplicationRecord
 
   # Returns true if a password reset has expired.
   def password_reset_expired?
-    reset_sent_at < 2.hours.ago
+    reset_sent_at < Settings.users.expired.hours.ago
   end
 
   # Defines a proto-feed.
