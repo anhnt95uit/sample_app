@@ -10,6 +10,7 @@ users:
     min_length: 6
   show:
     gravatar_size: 80
+  expired: 2
 gravatar:
   default_size: 50
 session:

@@ -39,10 +39,9 @@ class UsersController < ApplicationController
   # Confirms a logged-in user.
   def logged_in_user
     return if logged_in?
-      store_location
-      flash[:danger] = t "dictionary.flash.login"
-      redirect_to login_path
-    end
+    store_location
+    flash[:danger] = t "dictionary.flash.login"
+    redirect_to login_path
   end
 
   # Confirms the correct user.
@@ -58,6 +57,7 @@ class UsersController < ApplicationController
   end
 
   private
+
   def user_params
     params.require(:user).permit :name, :email, :password, :password_confirmation
   end
@@ -71,4 +71,5 @@ class UsersController < ApplicationController
     @user = User.find_by id: params[:id]
     flash[:danger] = t "dictionary.flash.not_found" if @user.nil?
   end
+end
 

@@ -22,6 +22,19 @@ en:
       not_found: "not found user!"
       activated: "Account activated!"
       invalid: "Invalid activation link"
+      reset_mail: "Email sent with password reset instructions"
+      nf_mail: "Email address not found"
+    password_ctl:
+      empty: "cant be empty"
+      done: "Password has been reset."
+      expired: "Password reset has expired."
+    mailer:
+      password: "Reset password"
+      account: "Account activation"
+      title: "Password reset"
+      intro1: "To reset your password click the link below:"
+      intro2: "This link will expire in two hours."
+      intro3: "If you did not request your password to be reset, please ignore this email and your password will stay as it is."
   layouts:
     about: "About"
     help: "Help"
@@ -34,12 +47,21 @@ en:
       settings: "Settings"
       log_out: "Log out"
       log_in: "Log in"
+  password:
+    new:
+      title: "Forgot password"
+      submit: "Submit"
+    edit:
+      title: "Reset password"
+      confirm: "Confirmation"
+      update: "Update password"
   session:
     new:
       title: "Log in"
       sign_up: "Sign up now!"
       new_user: "New user?"
       remember: "Remember me on this computer"
+      forgot: "(forgot password)"
   shared:
     error_messages:
       contains: "The form contains "
