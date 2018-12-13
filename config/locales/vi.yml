@@ -1,10 +1,7 @@
 vi:
   dictionary:
     welcome: "Chào mừng bạn đến với Ứng dụng mẫu!"
-    danger: "email / mật khẩu không hợp lệ."
-    update: "Hồ sơ cá nhân đã cập nhật"
-    log_in: "Xin vui lòng đăng nhập."
-    destroy: "Người dùng đã xóa"
+    invalid: "email / mật khẩu không hợp lệ."
     main_title: "Mẫu ứng dụng về Ruby on Rails"
     language_En: "Tiếng Anh"
     language_Vi: "Tiếng Việt"
@@ -14,7 +11,17 @@ vi:
     new: "mới"
     author: "Michael Hartl"
     sign_up: "Đăng kí ngay"
-    not_found: "Không tìm thấy người dùng !"
+    session_ctl:
+      message1: "Tài khoản chưa được kích hoạt."
+      message2: "Kiểm tra email của bạn cho các liên kết kích hoạt."
+    flash:
+      check: "Hãy kiểm tra email của bạn để kích hoạt tài khoản của bạn."
+      update: "Hồ sơ cá nhân đã cập nhật"
+      log_in: "Xin vui lòng đăng nhập."
+      destroy: "Người dùng đã xóa"
+      not_found: "Không tìm thấy người dùng !"
+      activated: "Tài khoản được kích hoạt!"
+      invalid: "Liên kết kích hoạt không hợp lệ"
   layouts:
     about: "Thông tin thêm"
     help: "Giúp đỡ"

@@ -17,9 +17,9 @@ class UsersController < ApplicationController
   def create
     @user = User.new user_params
     if @user.save
-      log_in @user
-      flash[:success] = t "dictionary.welcome"
-      redirect_to user_path @user
+      @user.send_activation_email
+      flash[:info] = t "dictionary.flash.check"
+      redirect_to root_url
     else
       render :new
     end
@@ -27,7 +27,7 @@ class UsersController < ApplicationController
 
   def update
     if @user.update_attributes(user_params)
-      flash[:success] = t "dictionary.update"
+      flash[:success] = t "dictionary.flash.update"
       redirect_to @user
     else
       render :edit
@@ -36,16 +36,16 @@ class UsersController < ApplicationController
 
   def edit; end
 
-# Confirms a logged-in user.
+  # Confirms a logged-in user.
   def logged_in_user
-    unless logged_in?
+    return if logged_in?
       store_location
-      flash[:danger] = t "dictionary.login"
+      flash[:danger] = t "dictionary.flash.login"
       redirect_to login_path
     end
   end
 
-   # Confirms the correct user.
+  # Confirms the correct user.
   def correct_user
     load_user
     redirect_to(root_url) unless current_user? @user
@@ -53,11 +53,16 @@ class UsersController < ApplicationController
 
   def destroy
     User.find(params[:id]).destroy
-    flash[:success] = t "dictionary.destroy"
+    flash[:success] = t "dictionary.flash.destroy"
     redirect_to users_path
   end
 
-  private
+  def load_user
+    @user = User.find_by id: params[:id]
+    flash[:danger] = t "dictionary.flash.not_found" if @user.nil?
+  end
+
+private
   def user_params
     params.require(:user).permit :name, :email, :password, :password_confirmation
   end
@@ -66,10 +71,3 @@ class UsersController < ApplicationController
   def admin_user
     redirect_to(root_url) unless current_user.admin?
   end
-
-  def load_user
-    @user = User.find_by id: params[:id]
-    flash[:danger] = t "dictionary.not_found" if @user.nil?
-    redirect_to login_path
-  end
-end
