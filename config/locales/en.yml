@@ -24,6 +24,8 @@ en:
       invalid: "Invalid activation link"
       reset_mail: "Email sent with password reset instructions"
       nf_mail: "Email address not found"
+      create_micro: "Micropost created!"
+      delete_micro: "Micropost deleted"
     password_ctl:
       empty: "cant be empty"
       done: "Password has been reset."
@@ -47,6 +49,11 @@ en:
       settings: "Settings"
       log_out: "Log out"
       log_in: "Log in"
+  microposts:
+    post: "Posted"
+    ago: "ago."
+    delete: "Delete"
+    confirm: "Are you sure?"
   password:
     new:
       title: "Forgot password"
@@ -66,6 +73,13 @@ en:
     error_messages:
       contains: "The form contains "
       errors: " error"
+    user_info:
+      to: "view my profile"
+      micropost: "micropost"
+    form:
+      place: "Compose new micropost..."
+      post: "Post"
+      size: 5
   static_pages:
     about:
       book: "book"
@@ -107,3 +121,6 @@ en:
     delete:
       title: "delete"
       confirm: "You sure?"
+    show:
+      title: "Microposts"
+

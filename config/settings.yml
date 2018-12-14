@@ -14,3 +14,9 @@ gravatar:
   default_size: 50
 session:
   one: "1"
+microposts:
+  maximum: 140
+picture:
+  default: 5
+  errors: "should be less than 5MB"
+  alert: "Maximum file size is 5MB. Please choose a smaller file."

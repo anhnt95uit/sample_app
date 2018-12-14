@@ -12,7 +12,9 @@ class UsersController < ApplicationController
     @user = User.new
   end
 
-  def show; end
+  def show
+    @microposts = @user.microposts.paginate(page: params[:page])
+  end
 
   def create
     @user = User.new user_params
@@ -40,15 +42,8 @@ class UsersController < ApplicationController
   def logged_in_user
     return if logged_in?
       store_location
-      flash[:danger] = t "dictionary.flash.login"
+      flash[:danger] = t "dictionary.flash.log_in"
       redirect_to login_path
-    end
-  end
-
-  # Confirms the correct user.
-  def correct_user
-    load_user
-    redirect_to(root_url) unless current_user? @user
   end
 
   def destroy
@@ -67,7 +62,14 @@ private
     params.require(:user).permit :name, :email, :password, :password_confirmation
   end
 
+   # Confirms the correct user.
+  def correct_user
+    load_user
+    redirect_to(root_path) unless current_user? @user
+  end
+
   # Confirms an admin user.
   def admin_user
-    redirect_to(root_url) unless current_user.admin?
+    redirect_to(root_path) unless current_user.admin?
   end
+end

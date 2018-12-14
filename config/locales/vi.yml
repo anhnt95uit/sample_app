@@ -24,6 +24,8 @@ vi:
       invalid: "Liên kết kích hoạt không hợp lệ"
       reset_mail: "Email được gửi với hướng dẫn đặt lại mật khẩu."
       nf_mail: "Không tìm thấy địa chỉ email."
+      create_micro: "Micropost đã tạo!"
+      delete_micro: "Đã xóa micropost"
     password_ctl:
       empty: "không thể để trống"
       done: "Mật khẩu đã được đặt lại."
@@ -47,6 +49,11 @@ vi:
       settings: "Cài đặt"
       log_out: "Đăng xuất"
       log_in: "Đăng nhập"
+  microposts:
+    post: "Đăng"
+    ago: "trước đây."
+    delete: "Xóa bỏ"
+    confirm: "Bạn có chắc không?"
   password:
     new:
       title: "Quên mật khẩu"
@@ -66,6 +73,13 @@ vi:
     error_messages:
       contains: "Biểu mẫu có chứa"
       errors: "lỗi"
+    user_info:
+      to: "xem hồ sơ của tôi"
+      micropost: "micropost"
+    form:
+      place: "Soạn micropost mới ..."
+      post: "Bài đăng"
+      size: 5
   static_pages:
     about:
       book: "sách"
@@ -107,4 +121,5 @@ vi:
     delete:
       title: "Xóa"
       confirm: "Bạn có chắc muốn xóa"
-
+    show:
+      title: "Microposts"
