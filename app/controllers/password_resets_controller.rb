@@ -33,28 +33,26 @@ class PasswordResetsController < ApplicationController
 
   private
 
-    def user_params
-      params.require(:user).permit :password, :password_confirmation
-    end
+  def user_params
+    params.require(:user).permit :password, :password_confirmation
+  end
 
-    def get_user
-      @user = User.find_by id: params[:id]
-      flash[:danger] = t "dictionary.flash.not_found" if @user.nil?
-    end
+  def get_user
+    @user = User.find_by id: params[:id]
+    flash[:danger] = t "dictionary.flash.not_found" if @user.nil?
+  end
 
-    # Confirms a valid user.
-    def valid_user
-      unless (@user && @user.activated? &&
-              @user.authenticated?(:reset, params[:id]))
-        redirect_to root_path
-      end
-    end
+  # Confirms a valid user.
+  def valid_user
+    return if (@user && @user.activated? &&
+    @user.authenticated?(:reset, params[:id]))
+    redirect_to root_url
+  end
 
-    # Checks expiration of reset token.
-    def check_expiration
-      if @user.password_reset_expired?
-        flash[:danger] = t "dictionary.password_ctl.expired"
-        redirect_to new_password_reset_path
-      end
-    end
+  # Checks expiration of reset token.
+  def check_expiration
+    return if @user.password_reset_expired?
+    flash[:danger] = t "dictionary.password_ctl.expired"
+    redirect_to new_password_reset_url
+  end
 end

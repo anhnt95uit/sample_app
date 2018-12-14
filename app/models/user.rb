@@ -83,7 +83,6 @@ class User < ApplicationRecord
     reset_sent_at < Settings.users.expired.hours.ago
   end
 
-
   # Defines a proto-feed.
   # See "Following users" for the full implementation.
   def feed
