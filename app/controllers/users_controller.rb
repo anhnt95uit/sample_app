@@ -58,7 +58,7 @@ class UsersController < ApplicationController
     params.require(:user).permit :name, :email, :password, :password_confirmation
   end
 
-   # Confirms the correct user.
+  # Confirms the correct user.
   def correct_user
     load_user
     redirect_to(root_path) unless current_user? @user
