@@ -57,17 +57,18 @@ class UsersController < ApplicationController
     redirect_to users_path
   end
 
+  private
+  def user_params
+    params.require(:user).permit :name, :email, :password, :password_confirmation
+  end
+
+    # Confirms an admin user.
+  def admin_user
+    redirect_to(root_url) unless current_user.admin?
+  end
+
   def load_user
     @user = User.find_by id: params[:id]
     flash[:danger] = t "dictionary.flash.not_found" if @user.nil?
   end
 
-private
-  def user_params
-    params.require(:user).permit :name, :email, :password, :password_confirmation
-  end
-
-  # Confirms an admin user.
-  def admin_user
-    redirect_to(root_url) unless current_user.admin?
-  end
