@@ -22,6 +22,19 @@ vi:
       not_found: "Không tìm thấy người dùng !"
       activated: "Tài khoản được kích hoạt!"
       invalid: "Liên kết kích hoạt không hợp lệ"
+      reset_mail: "Email được gửi với hướng dẫn đặt lại mật khẩu."
+      nf_mail: "Không tìm thấy địa chỉ email."
+    password_ctl:
+      empty: "không thể để trống"
+      done: "Mật khẩu đã được đặt lại."
+      expired: "Đặt lại mật khẩu đã hết hạn."
+    mailer:
+      password: "Đặt lại mật khẩu"
+      account: "Kích hoạt tài khoản"
+      title: "Đặt lại mật khẩu"
+      intro1: "Để đặt lại mật khẩu của bạn, nhấp vào liên kết dưới đây:"
+      intro2: "Liên kết này sẽ hết hạn trong hai giờ."
+      intro3: "Nếu bạn không yêu cầu đặt lại mật khẩu, vui lòng bỏ qua email này và mật khẩu của bạn sẽ được giữ nguyên."
   layouts:
     about: "Thông tin thêm"
     help: "Giúp đỡ"
@@ -34,12 +47,21 @@ vi:
       settings: "Cài đặt"
       log_out: "Đăng xuất"
       log_in: "Đăng nhập"
+  password:
+    new:
+      title: "Quên mật khẩu"
+      submit: "Gửi đi"
+    edit:
+      title: "Đặt lại mật khẩu"
+      confirm: "Xác nhận"
+      update: "Cập nhật mật khẩu"
   session:
     new:
       title: "Đăng nhập"
       sign_up: "Dăng kí ngay"
       new_user: "Người dùng mới?"
       remember: "Ghi nhớ tôi trên máy tính này"
+      forgot: "(Quên mật khẩu)"
   shared:
     error_messages:
       contains: "Biểu mẫu có chứa"
