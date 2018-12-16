@@ -74,3 +74,4 @@ class UsersController < ApplicationController
     flash[:danger] = t "dictionary.flash.not_found" if @user.nil?
   end
 end
+
