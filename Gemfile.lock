@@ -107,6 +107,8 @@ GEM
     faker (1.7.3)
       i18n (~> 0.5)
     ffi (1.9.25)
+    figaro (1.1.1)
+      thor (~> 0.14)
     fission (0.5.0)
       CFPropertyList (~> 2.2)
     fog (1.42.0)
@@ -455,6 +457,7 @@ DEPENDENCIES
   coffee-rails (= 4.2.2)
   config
   faker (= 1.7.3)
+  figaro
   fog (= 1.42)
   guard (= 2.13.0)
   guard-minitest (= 2.4.4)

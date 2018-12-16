@@ -1,5 +1,6 @@
 en:
   dictionary:
+    myblog: "My_Blog"
     welcome: "Welcome to the Sample App!"
     invalid: "Invalid email/password combination"
     main_title: "Ruby on Rails Tutorial Sample App"
@@ -26,6 +27,8 @@ en:
       nf_mail: "Email address not found"
       create_micro: "Micropost created!"
       delete_micro: "Micropost deleted"
+      follow: "You have followed up successfully."
+      unfollow: "Unfollow successfully"
     password_ctl:
       empty: "cant be empty"
       done: "Password has been reset."
@@ -49,12 +52,14 @@ en:
       settings: "Settings"
       log_out: "Log out"
       log_in: "Log in"
+      english: "English"
+      vietnamese: "VietNamese"
   microposts:
     post: "Posted"
     ago: "ago."
     delete: "Delete"
     confirm: "Are you sure?"
-  password:
+  password_reset:
     new:
       title: "Forgot password"
       submit: "Submit"
@@ -62,6 +67,7 @@ en:
       title: "Reset password"
       confirm: "Confirmation"
       update: "Update password"
+      password: "password"
   session:
     new:
       title: "Log in"
@@ -80,6 +86,9 @@ en:
       place: "Compose new micropost..."
       post: "Post"
       size: 5
+    stats:
+      following: "following"
+      followers: "followers"
   static_pages:
     about:
       book: "book"
@@ -99,10 +108,11 @@ en:
       content_help: "Rails Tutorial help section"
       title: "Help"
     home:
-      hello: "Welcome to the Sample App"
+      hello: "Welcome to the My Blog"
       introduce: "This is the home page for"
       title: "Home"
       end: "sample application"
+      feed: "Micropost Feed"
   users:
     new:
       title: "Sign Up"
@@ -123,4 +133,13 @@ en:
       confirm: "You sure?"
     show:
       title: "Microposts"
-
+    follow: "Follow"
+    unfollow: "Unfollow"
+    show_follow:
+      microposts: "Microposts :"
+      view: "view my profile"
+  user_mailer:
+    title: "Sample_app"
+    hello: "Hi! @user.name"
+    activate: "Active"
+    welcome: "Welcome to the Sample App! Click on the link below to activate your account:"

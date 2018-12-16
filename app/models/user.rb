@@ -1,5 +1,12 @@
 class User < ApplicationRecord
   has_many :microposts, dependent: :destroy
+  has_many :active_relationships, class_name: Relationship.name,
+    foreign_key: :follower_id, dependent: :destroy
+  has_many :passive_relationships, class_name: Relationship.name,
+    foreign_key: :followed_id, dependent: :destroy
+  has_many :following, through: :active_relationships, source: :followed
+  has_many :followers, through: :passive_relationships, source: :follower
+
   attr_accessor :remember_token, :activation_token, :reset_token
   before_save   :downcase_email
   before_create :create_activation_digest
@@ -16,6 +23,7 @@ class User < ApplicationRecord
   validates :password, presence: true,
     length: {minimum: Settings[:users][:password][:min_length]}, allow_nil: true
   # Returns the hash digest of the given string.
+
 
   def self.digest string
     cost =
@@ -58,7 +66,7 @@ class User < ApplicationRecord
 
   # Activates an account.
   def activate
-    update_columns(activated: true, activated_at: Time.zone.now)
+    update_columns activated: true, activated_at: Time.zone.now
   end
 
   # Sends activation email.
@@ -69,8 +77,8 @@ class User < ApplicationRecord
   # Sets the password reset attributes.
   def create_reset_digest
     self.reset_token = User.new_token
-    update_columns reset_digest: User.digest(reset_token),
-      reset_sent_at: Time.zone.now
+    update_columns(reset_digest: User.digest(reset_token),
+    reset_sent_at: Time.zone.now)
   end
 
   # Sends password reset email.
@@ -82,12 +90,26 @@ class User < ApplicationRecord
   def password_reset_expired?
     reset_sent_at < Settings.users.expired.hours.ago
   end
-
-
   # Defines a proto-feed.
   # See "Following users" for the full implementation.
+
   def feed
-    Micropost.where("user_id = ?", id)
+    Micropost.feed(following_ids, id).newest
+  end
+
+  # Follows a user.
+  def follow other_user
+    following << other_user
+  end
+
+  # Unfollows a user.
+  def unfollow other_user
+    following.delete(other_user)
+  end
+
+  # Returns true if the current user is following the other user.
+  def following? other_user
+    following.include?(other_user)
   end
 
   private
