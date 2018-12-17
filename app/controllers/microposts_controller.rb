@@ -18,7 +18,8 @@ class MicropostsController < ApplicationController
     redirect_to request.referrer || root_path
   end
 
-   # Confirms a logged-in user.
+
+  # Confirms a logged-in user.
   def logged_in_user
     return if logged_in?
       store_location
@@ -27,10 +28,6 @@ class MicropostsController < ApplicationController
   end
 
   private
-
-  def micropost_params
-      params.require(:micropost).permit :content
-  end
 
   def correct_user
       @micropost = current_user.microposts.find_by id: params[:id]
