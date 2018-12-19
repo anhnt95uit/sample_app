@@ -11,12 +11,17 @@ users:
   show:
     gravatar_size: 80
   expired: 2
+  paginate:
+    per_page: 30
 gravatar:
   default_size: 50
+  size_30: 30
 session:
   one: "1"
 microposts:
   maximum: 140
+  paginate:
+    per_page: 20
 picture:
   default: 5
   errors: "should be less than 5MB"

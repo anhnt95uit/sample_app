@@ -1,3 +1,6 @@
-User#account_activation
+<%= t "user_mailer.hello" %>,
+<%= t "user_mailer.welcome" %>,
 
-<%= @greeting %>, find me in app/views/user_mailer/account_activation.text.erb
+<%= edit_account_activation_url(
+  @locale, @user.activation_token,
+  email: @user.email) %>

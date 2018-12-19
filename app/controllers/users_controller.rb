@@ -1,11 +1,12 @@
 class UsersController < ApplicationController
   before_action :logged_in_user, except: [:show, :new, :create]
-  before_action :correct_user, only: [:edit, :update]
-  before_action :admin_user, only: :destroy
   before_action :load_user, except: [:index, :new, :create]
+  before_action :correct_user, only: [:edit, :update, :following, :followers]
+  before_action :admin_user, only: :destroy
 
   def index
-    @users = User.paginate page: params[:page]
+    @users = User.paginate page: params[:page],
+       per_page: Settings.users.paginate.per_page
   end
 
   def new
@@ -13,7 +14,8 @@ class UsersController < ApplicationController
   end
 
   def show
-    @microposts = @user.microposts.paginate(page: params[:page])
+    @microposts = @user.microposts.paginate page: params[:page],
+      per_page: Settings.microposts.paginate.per_page
   end
 
   def create
@@ -41,9 +43,9 @@ class UsersController < ApplicationController
   # Confirms a logged-in user.
   def logged_in_user
     return if logged_in?
-      store_location
-      flash[:danger] = t "dictionary.flash.log_in"
-      redirect_to login_path
+    store_location
+    flash[:danger] = t "dictionary.flash.log_in"
+    redirect_to login_path
   end
 
   def destroy
@@ -52,13 +54,27 @@ class UsersController < ApplicationController
     redirect_to users_path
   end
 
+  def following
+    @title = "Following"
+    @users = @user.following.paginate page: params[:page],
+      per_page: Settings.microposts.paginate.per_page
+    render :show_follow
+  end
+
+  def followers
+    @title = "Followers"
+    @users = @user.followers.paginate page: params[:page],
+      per_page: Settings.microposts.paginate.per_page
+    render :show_follow
+  end
+
   private
 
   def user_params
     params.require(:user).permit :name, :email, :password, :password_confirmation
   end
 
-   # Confirms the correct user.
+  # Confirms the correct user.
   def correct_user
     load_user
     redirect_to(root_path) unless current_user? @user
@@ -71,7 +87,8 @@ class UsersController < ApplicationController
 
   def load_user
     @user = User.find_by id: params[:id]
-    flash[:danger] = t "dictionary.flash.not_found" if @user.nil?
+    return if @user
+    flash[:danger] = t "dictionary.flash.not_found"
+    redirect_to root_path
   end
 end
-

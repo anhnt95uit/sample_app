@@ -1,5 +1,6 @@
 vi:
   dictionary:
+    myblog: "My_Blog"
     welcome: "Chào mừng bạn đến với Ứng dụng mẫu!"
     invalid: "email / mật khẩu không hợp lệ."
     main_title: "Mẫu ứng dụng về Ruby on Rails"
@@ -26,6 +27,8 @@ vi:
       nf_mail: "Không tìm thấy địa chỉ email."
       create_micro: "Micropost đã tạo!"
       delete_micro: "Đã xóa micropost"
+      follow: "Bạn đã theo dõi thành công"
+      unfollow: "Hủy theo dõi thành công"
     password_ctl:
       empty: "không thể để trống"
       done: "Mật khẩu đã được đặt lại."
@@ -49,12 +52,14 @@ vi:
       settings: "Cài đặt"
       log_out: "Đăng xuất"
       log_in: "Đăng nhập"
+      english: "Tiếng Anh"
+      vietnamese: "Tiếng Việt"
   microposts:
     post: "Đăng"
     ago: "trước đây."
     delete: "Xóa bỏ"
     confirm: "Bạn có chắc không?"
-  password:
+  password_reset:
     new:
       title: "Quên mật khẩu"
       submit: "Gửi đi"
@@ -62,6 +67,7 @@ vi:
       title: "Đặt lại mật khẩu"
       confirm: "Xác nhận"
       update: "Cập nhật mật khẩu"
+      password: "mật khẩu"
   session:
     new:
       title: "Đăng nhập"
@@ -80,6 +86,9 @@ vi:
       place: "Soạn micropost mới ..."
       post: "Bài đăng"
       size: 5
+    stats:
+      following: "theo dõi"
+      followers: "người theo dõi"
   static_pages:
     about:
       book: "sách"
@@ -99,10 +108,11 @@ vi:
       content_help: "Phần trợ giúp của Rails Tutorial"
       title: "Trợ giúp"
     home:
-      hello: "Chào mừng bạn đến với Ứng dụng mẫu"
+      hello: "Chào mừng bạn đến với My Blog"
       introduce: "Đây là trang chủ cho"
       title: "Trang chủ"
       end: "Ứng dụng Mẫu"
+      feed: "Micropost Feed"
   users:
     new:
       title: "Đăng ký"
@@ -123,3 +133,13 @@ vi:
       confirm: "Bạn có chắc muốn xóa"
     show:
       title: "Microposts"
+    follow: "Theo dõi"
+    unfollow: "Hủy theo dõi"
+    show_follow:
+      microposts: "Microposts :"
+      view: "xem hồ sơ của tôi"
+  user_mailer:
+    title: "Sample_app"
+    hello: "Xin chào! @user.name"
+    activate: "Kích hoạt"
+    welcome: "Chào mừng bạn đến với Ứng dụng mẫu! Nhấp vào liên kết dưới đây để kích hoạt tài khoản của bạn:"

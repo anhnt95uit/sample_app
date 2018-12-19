@@ -18,26 +18,22 @@ class MicropostsController < ApplicationController
     redirect_to request.referrer || root_path
   end
 
-   # Confirms a logged-in user.
+  # Confirms a logged-in user.
   def logged_in_user
     return if logged_in?
-      store_location
-      flash[:danger] = t "dictionary.flash.log_in"
-      redirect_to login_path
+    store_location
+    flash[:danger] = t "dictionary.flash.log_in"
+    redirect_to login_path
   end
 
   private
 
-  def micropost_params
-      params.require(:micropost).permit :content
-  end
-
   def correct_user
-      @micropost = current_user.microposts.find_by id: params[:id]
-      redirect_to root_path if @micropost.nil?
+    @micropost = current_user.microposts.find_by id: params[:id]
+    redirect_to root_path unless @micropost
   end
 
   def micropost_params
-      params.require(:micropost).permit :content, :picture
+    params.require(:micropost).permit :content, :picture
   end
 end
